@@ -1,0 +1,102 @@
+.container {
+    width: 80%;
+    
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+input[type=text] {
+    border: 1px solid steelblue;
+    width: 99%;
+} 
+/* label {
+    float: left;
+    text-align: left;
+} */
+
+
+
+.outer {
+    margin-bottom: 10px;
+    display: flex;
+    
+  }
+  .form-container {
+      width: 30%;
+  }
+  /* #label, #label1, #label2, #label3 {
+    width: 30%;
+    float: left;
+  } */
+  .labelClass {
+    width: 30%;
+    
+    padding-right: 10px;
+  }
+  #input, #input1, #input3 {
+    width: 100%;
+  }
+  .input {
+    
+  }
+  #input3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .btnDiv {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  .addBtn {
+    padding: 4px;
+    width: 21%;
+    height: auto;
+    background-color: steelblue;
+  }
+
+  .content-table {
+    
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+  }
+  
+  .content-table thead tr {
+    background-color: steelblue;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  /*To show which tr has focus at the nmoment */
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: steelblue;
+  }
+  .delBtn {
+    padding: 4px;
+    width: 100%;
+    height: auto;
+    background-color: steelblue;
+    border: 1px solid steelblue;
+  }
