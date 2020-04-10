@@ -60,8 +60,7 @@ window.addEventListener('load', function () {
             console.log(lastRow)
             table.innerHTML += html;
         } else {
-            document.getElementById("registration_info").innerHTML = "";
-            document.getElementById("registration_form").submit();
+            console.log('ERROR');
         }
 
     });
