@@ -1,14 +1,16 @@
 let table = document.getElementById('tbody')
 let tr = document.querySelectorAll("tr");
-let delBtn = document.querySelector("button.delBtn");
+let delBtn = document.querySelector(".delBtn");
 let employees = [
     ["Jesse Rodriguez", "Boss", 1111],
     ["Dave Sanchez", "sales", 2222],
     ["Steve Cabollero", "VP", 3333],
     ["Danny Way", "Marketing", 444],
-    ["Paul Rodriguez", "HR", 5555]
+    ["Paul Rodriguez", "HR", 5555],
+    ["Phil Rodriguez", "HR", 6666]
 ]
-let button;
+console.log(delBtn)
+let button2;
 let addBtn = document.querySelector(".addBtn");
 let name = document.getElementById("name");
 let title = document.getElementById("email");
@@ -18,27 +20,35 @@ let tableRow;
 let td = document.querySelectorAll(".content-table td");
 let tableData;
 let newArray;
-let td1;
-let td2;
-let td3;
-let b;
-let cell;
-let we;
 let tabled;
 
 window.addEventListener('load', function () {
-        cell = document.querySelectorAll(".content-table td:last-child");
-    cell.forEach(function (b) {
-        button = document.createElement("button");
-        button.className = "delBtn";
-        button.innerText = 'X';
-        b.appendChild(button);
-        console.log(b);
-    });
-    button.addEventListener('click', function () {
-        console.log('sdsd');
-    })
+    
+    employees.forEach(function(i) {
+        tableRow = document.createElement("tr");
+        i.forEach(function(c) {
+            tabled = document.createElement("td");
+            tabled.innerText = c;
+            tableRow.appendChild(tabled)
+        });
 
+
+        console.log(tableRow)
+        button2 = document.createElement("button");
+        button2.className = 'delBtn';
+        button2.innerText = 'X';
+        tableRow.appendChild(button2);
+        table.appendChild(tableRow)
+    });
+
+
+    //Event delegation on document
+    document.addEventListener('click',function(e){
+        if(e.target.className === 'delBtn'){
+            console.log(e.target)
+            e.target.parentElement.remove();
+         }
+     });
 
     addBtn.addEventListener("click", function () {
         tableRow = document.createElement("tr");
@@ -51,19 +61,15 @@ window.addEventListener('load', function () {
             tableRow.append(tabled);
             console.log(tabled);
         });
-        let button2 = document.createElement("button");
+        button2 = document.createElement("button");
         button2.className = 'delBtn';
         button2.innerText = 'X';
         tableRow.appendChild(button2);
-        table.appendChild(tableRow)
+        table.appendChild(tableRow);
+        
         name.value = '';
         title.value = '';
         ext.value = '';
-       
-
-    });
-
-    
-    
-    
+    }); 
+     
 });
